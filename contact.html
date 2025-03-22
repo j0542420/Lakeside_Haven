@@ -1,0 +1,64 @@
+<!--Contact page-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Welcome to Lakeside Haven - Contact</title>
+	<meta charset="utf-8">
+	<link href="styles/casita.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="images/favicon.ico.png" type="image/x-icon">
+</head>
+<body>
+<!--Start a div wrapper-->
+	<div id="wrapper">
+	<!--header element-->
+	<header>
+		<h1>Welcome to Lakeside Haven</h1>
+	</header>
+	<!--navigation Section-->
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="rooms/lakeview-loft.html">The Lakeview Loft</a></li>
+			<li><a href="rooms/serenity-suite.html">The Serenity Suite</a></li>
+			<li><a href="events/weekend.html">Weekend Events</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</nav>
+	<!--Main Content Section -->
+	<main>
+		<h3>Ready to book a night</h3>
+		<p>Ready to book your stay or have questions about the inn? We’d love to hear from you!</P>
+		<form method="post" action="https://webdevbasics.net/scripts/demo.php">
+			<label for="myName">Name: </label>
+			<input type="text" id="myName" name="myName" required>
+			<label for="email">Email: </label>
+			<input type="email" id="email" name="email" required>
+			<label for="myCheckIn">Check In Date: </label>
+			<input type="date" id="myCheckIn" name="myCheckIn" required>
+			<label for="myCheckOut">Check Out Date: </label>
+			<input type="date" id="myCheckOut" name="myCheckOut" required>
+			<input type="submit" value="Book Your Days">
+		</form>
+		<p>Get in touch with us through our email address or give us a call.</p>
+		<h3>Email: <a href="mailto:info@lakesidehaven.com">info@lakesidehaven.com</a> </h3>
+		<h3>Phone: <a href="tel:+18888888888">(888)-888-8888</a></h3>
+		<p>Our friendly team is here to help you plan an unforgettable lakeside experience.</p>
+		<!--Meter element-->
+		<h3><a href="#" onmouseover="alert('Total of 100,000 people have visited our Bed and Breakfest. 45% of people are from Minnesota. 15% of people are from Iowa. 15% of people are from wisconsin. Finally 25% of people are from North and South Dakota combined.');">Visitor Statistics:</a></h3>
+		<p>We’re proud to welcome guests from across the region!</p>
+			<meter value="100000" min="0" max="100000">100000</meter>100,000 Total Visits<br>
+			<meter value="45000" min="0" max="100000">45000</meter> 45,000 Minnesota<br>
+			<meter value="15000" min="0" max="100000">15000</meter> 15,000 Iowa<br>
+			<meter value="15000" min="0" max="100000">15000</meter> 15,000 Wisconsin<br>
+			<meter value="25000" min="0" max="100000">25000</meter> 25,000 North & South Dakota<br>
+	</main>
+	<!-- Footer Section -->
+	<footer>
+		Copyright &copy; 2024 WebMaster<br>
+		<a href="mailto:j0542420@amarillocollege.com">Jose Villa</a>
+		<hr>
+	</footer>
+	</div>
+</body>
+</html>
