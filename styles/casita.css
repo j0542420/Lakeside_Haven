@@ -36,6 +36,9 @@ header a:link {color: #231814;}
 header a:visited {color: #231814;}
 header a:hover {color: #FEF6C2;}
 /*Styles for the heading tags*/
+p {
+	font-size: 1.5em;
+}
 h1 { 
 	 font-size: 2em;
 	 text-align: center;
