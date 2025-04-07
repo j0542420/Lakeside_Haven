@@ -7,6 +7,8 @@
 	<link href="styles/casita.css" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="images/favicon.ico.png" type="image/x-icon">
+	<!-- Connects the file "code.js" to the html -->
+	<script src="code.js" defer></script>
 </head>
 <body>
 <!--Start a div wrapper-->
@@ -27,19 +29,25 @@
 	</nav>
 	<!--Main Content Section -->
 	<main>
+		<!-- inserting the switch statement with the id -->
+		<p id = "greetings"></p>
+		<p id = "days"></p>
 		<h3>Ready to book a night</h3>
 		<p>Ready to book your stay or have questions about the inn? We’d love to hear from you!</P>
-		<form method="post" action="https://webdevbasics.net/scripts/demo.php">
+		<!-- adding a id to the contact Form -->
+		<form id= "contactForm" method="post" action="https://webdevbasics.net/scripts/demo.php">
 			<label for="myName">Name: </label>
 			<input type="text" id="myName" name="myName" required>
 			<label for="email">Email: </label>
-			<input type="email" id="email" name="email" required>
+			<input type="email" id="email" name="email" required> 
 			<label for="myCheckIn">Check In Date: </label>
 			<input type="date" id="myCheckIn" name="myCheckIn" required>
 			<label for="myCheckOut">Check Out Date: </label>
 			<input type="date" id="myCheckOut" name="myCheckOut" required>
 			<input type="submit" value="Book Your Days">
 		</form>
+		<!-- Adding a error message container -->
+		 <div id="formErrors"></div>
 		<p>Get in touch with us through our email address or give us a call.</p>
 		<h3>Email: <a href="mailto:info@lakesidehaven.com">info@lakesidehaven.com</a> </h3>
 		<h3>Phone: <a href="tel:+18888888888">(888)-888-8888</a></h3>
