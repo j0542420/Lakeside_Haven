@@ -1,5 +1,5 @@
 "use strict"
-debugger;
+// debugger;
 // declaring variable "day" using let
 let day;
 // declaring the variable of "hour"
@@ -61,6 +61,8 @@ if (contactForm){
     // clears previous error messages
     errorsDiv.innerHTML = "";
 
+
+
     // start try-catch to handle validation errors
     try {
       // check if the name field is empty
@@ -70,6 +72,13 @@ if (contactForm){
       // check to see if the email has a @ to be valid
       if (!email.includes("@")){
         throw "Please enter a valid email.";
+      }
+      // blocking an Email domain that has gmail.com
+      let bannedDomain = /@gmail\.com$/i;
+      // testing the email that the user provided and if it has @gmail.com
+      if(bannedDomain.test(email)){
+        // stops the form from being submited by and telling the user to use a different email
+        throw "Gmail addresses are not accepted. Please use a different email."
       }
       // check if the check-out date is later than the check-in date
       if (checkOutDate <= checkInDate) {
