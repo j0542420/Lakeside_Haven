@@ -61,7 +61,8 @@ if (contactForm){
     // clears previous error messages
     errorsDiv.innerHTML = "";
 
-
+    // Create Booking object
+    let booking = new Booking(name, email, checkInDate, checkOutDate);
 
     // start try-catch to handle validation errors
     try {
@@ -81,14 +82,14 @@ if (contactForm){
         throw "Gmail addresses are not accepted. Please use a different email."
       }
       // check if the check-out date is later than the check-in date
-      if (checkOutDate <= checkInDate) {
+      if (booking.getNights() <= 0 ) {
         throw "Check-out Date must be after Check-in Date.";
       }
 
-      alert("Form submitted successfully");
+      alert("Booking complete for " + booking.name + " for " + booking.getNights() + " nights. We'll contact you at " + booking.email + " about the details of your booking.");
 
       // if all validation pass, submit the form
-      this.onsubmit();
+      this.submit();
     }catch (error){
       errorsDiv.innerHTML = error;
       errorsDiv.style.color = "red";
