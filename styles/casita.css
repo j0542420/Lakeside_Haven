@@ -140,12 +140,21 @@ th,td { padding: 20px; }
 tr:nth-of-type(odd) { background-color: #ADD8E6; }
 /*styles for a Form*/
 form {
+	width:100%;
+	height: auto;
 	display: flex;
 	flex-direction: column;
-	padding-left: 1em;
-	width: 80%;
+	padding-left: 15em;
 }
-input, textarea { margin-bottom: .5em; }
+
+input, textarea { margin-bottom: .5em; width:20em }
+
+#divform {
+
+	margin: auto;
+	width:800px;
+	height:auto;
+}
 /*Styles for the Footer Element*/
 footer { background-color: #93E9BE;/*Color for the footer*/
        padding: 10px;
@@ -247,6 +256,22 @@ footer { background-color: #93E9BE;/*Color for the footer*/
 
 	}
 }	
-	
+/* Map Styles */
+
+div#displayMap {
+	width: 45%;
+	padding-bottom: 35%;
+	height: 0;
+	margin: 30px auto;
+	border: 5px solid rgb(1, 188, 245);
+ }
+ 
+ div#routeBox {
+	width: 70%;
+	margin: 10px auto;
+	min-height: 50px;
+	border: 3px solid rgb(1, 188, 245);
+	text-align: center;
+ }
 	
 	
