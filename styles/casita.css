@@ -146,7 +146,7 @@ form {
 	flex-direction: column;
 }
 
-input, textarea { margin-bottom: .5em; width:50em }
+input, textarea { margin-bottom: 1em; width:50em }
 
 #divform {
 
