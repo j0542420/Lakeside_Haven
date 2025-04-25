@@ -144,10 +144,9 @@ form {
 	height: auto;
 	display: flex;
 	flex-direction: column;
-	padding-left: 15em;
 }
 
-input, textarea { margin-bottom: .5em; width:20em }
+input, textarea { margin-bottom: .5em; width:50em }
 
 #divform {
 
