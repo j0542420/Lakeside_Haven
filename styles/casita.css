@@ -146,6 +146,13 @@ form {
 	flex-direction: column;
 }
 
+/*styles for location-info */
+#location-info {
+	display: block;
+	margin-top: 10px;
+	font-size: 14px;
+}
+
 input, textarea { margin-bottom: 1em; width:50em }
 
 #divform {

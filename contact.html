@@ -13,6 +13,8 @@
 	 <script src="booking.js" defer></script>
 	 <!-- Connects with google Maps-->
 	 <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyA4-a0-Cky31xCiqy6oty-oRzoZDxLqg&callback=initMap"></script>
+	 <!-- connects to the zipVerifier.js-->
+	  <script src="zipVerifier.js" defer></script>
 </head>
 <body>
 <!--Start a div wrapper-->
@@ -54,6 +56,24 @@
 				<input type="date" id="myCheckIn" name="myCheckIn" required>
 				<label for="myCheckOut">Check Out Date: </label>
 				<input type="date" id="myCheckOut" name="myCheckOut" required>
+				<!-- adding a country label, input for country-->
+				 <label for="country">Your Country</label>
+				 <select name="country" id="country">
+					<option value="us">United States</option>
+					<option value="ca">Canada</option>
+					<option value="jp">Japan</option>
+					<option value="mx">Mexico</option>
+				 </select>
+				<!-- Adding a label, input for the Zip-->
+				<label for="zipcode">Enter your ZIP Code</label>
+				<input type="text" name="zipcode" id="zipcode" autocomplete="off">
+				<!-- adding a location label, input for location-->
+				<label for="place">Your place</label>
+				<input type="text" name="place" id="place" autocomplete="off">
+				<!-- adding a region label, input for region-->
+				<label for="region">Your Region</label>
+				<input type="text" name="region" id="region" autocomplete="off">				 
+				<p id="location-info"></p>
 				<input type="submit" value="Book Your Days">
 			</form>
 		</div>
