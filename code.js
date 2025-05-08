@@ -38,28 +38,45 @@ switch (new Date().getDay()) {
     day = "Saturday";
 }
 // outputs the result into the HTML element with the id "day"
-document.getElementById("greetings").innerHTML = greeting;
-document.getElementById("days").innerHTML = " Today is " + day;
+// document.getElementById("greetings").innerHTML = greeting;
+// document.getElementById("days").innerHTML = " Today is " + day;
+
+// changing the getElementById with JQuery
+$("#greetings").html(greeting);
+$("#days").html(" Today is " + day);
+
 
 // adding an event listener to the "submit" event in the contact form
-let contactForm = document.getElementById("contactForm");
+// let contactForm = document.getElementById("contactForm"); to JQuery
+let contactForm = $("#contactForm");
 if (contactForm){
-  contactForm.addEventListener("submit", function(event) {
+  // contactForm.addEventListener("submit", function(event) { to JQuery
+  contactForm.on("submit", function(event) {
     // prevent the default form submission to allow validation first
     event.preventDefault();
 
     //get the values that the user input
-    let name = document.getElementById("myName").value;
-    let email = document.getElementById("email").value;
-    // converting the check-in date to a Date object
-    let checkInDate = new Date(document.getElementById("myCheckIn").value);
-    // converting the check-out date to a Date object
-    let checkOutDate = new Date(document.getElementById("myCheckOut").value);
+    // let name = document.getElementById("myName").value; to JQuery
+    // let email = document.getElementById("email").value; to JQuery
+
+    let name = $("#myName").val();
+    let email = $("#email").val();
+
+    // // converting the check-in date to a Date object
+    // let checkInDate = new Date(document.getElementById("myCheckIn").value); to JQuery
+    // // converting the check-out date to a Date object
+    // let checkOutDate = new Date(document.getElementById("myCheckOut").value); to JQuery
+
+    let checkInDate = new Date($("#myCheckIn").val());
+    let checkOutDate = new Date($("#myCheckOut").val());
+
     // the div will display any error messages
-    let errorsDiv = document.getElementById("formErrors");
+    // let errorsDiv = document.getElementById("formErrors"); to JQuery
 
     // clears previous error messages
-    errorsDiv.innerHTML = "";
+    // errorsDiv.innerHTML = ""; to JQuery
+
+    $("#formErrors").html("");
 
     // Create Booking object
     let booking = new Booking(name, email, checkInDate, checkOutDate);
@@ -67,7 +84,7 @@ if (contactForm){
     // start try-catch to handle validation errors
     try {
       // check if the name field is empty
-      if (name === ""){
+      if (name === " "){
         throw "Name cannot be empty.";
       }
       // check to see if the email has a @ to be valid
@@ -91,9 +108,15 @@ if (contactForm){
       // if all validation pass, submit the form
       this.submit();
     }catch (error){
-      errorsDiv.innerHTML = error;
-      errorsDiv.style.color = "red";
-      errorsDiv.style.fontWeight = "bold";
+      // errorsDiv.innerHTML = error;
+      // errorsDiv.style.color = "red";
+      // errorsDiv.style.fontWeight = "bold";
+
+      // changing the catch error to JQuery with .css()
+      $("#formErrors").html(error).css({
+        "color" : "red",
+        "font-weight" : "bold"
+      });
     }
   });
 }
